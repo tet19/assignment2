@@ -3,6 +3,7 @@ CS 1520 - Fall 2016
 Terry Tan */
 
 function validation(event) {
+	
 	var firstName, lastName, numCats;
 	//get stuff
 	firstName = document.getElementById("firstName").value;
@@ -36,10 +37,16 @@ function validation(event) {
 		alert("Invalid Input.\n" + errMessage);
 	}
 	else {
-		alert("Successful form submission. \nHello " + firstName + " " + lastName + "!");
+	alert("Successful form submission. \nHello " + firstName + " " + lastName + "!");
 	//	var bod = document.getElementwithId("mainform");
 	//	bod.innerHTML = "Hello World!";
+	//document.getElementById("mainDiv").style.display = "none";			//Hide it
+	hideForm();
 	}
+}
+
+function hideForm(){
+		document.getElementById("mainDiv").innerHTML = "<h1>Thank you for your submission!</h1>";   //Hide it
 }
 
 
