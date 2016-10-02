@@ -5,9 +5,9 @@ Terry Tan */
 function validation(event) {
 	var firstName, lastName, numCats;
 	//get stuff
-	firstName = document.getElementById("firstname").value;
-	lastName = document.getElementById("lastname").value;
-	numCats = document.getElementById("numcats").value;
+	firstName = document.getElementById("firstName").value;
+	lastName = document.getElementById("lastName").value;
+	numCats = document.getElementById("numCats").value;
 	catBreeds = document.getElementsByName("catbreed");
 	var errMessage = "";
 	
@@ -44,7 +44,7 @@ function validation(event) {
 
 
 function resetForm (event){
-	document.getElementById("my_form").reset();
+	document.getElementById("myForm").reset();
 }
 
 
