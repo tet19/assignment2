@@ -1,11 +1,40 @@
 <!doctype html>
 <html>
+<!-- Assignment 2
+CS 1520 - Fall 2016
+Terry Tan -->
   <head>
     <meta charset="utf-8">
-    <link href="/css/main.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <title>Terry's Total Awesome Form Page</title>
   </head>
   
-  <body>
+	<body>
+		<div id="maindiv">
+			<h1>Terry's Awesome Form</h1>
 
-  </body>
-</html
+			<form id="my_form">
+
+				Firstname: <input type='text' id='firstname' /><br />
+				Lastname: <input type='text' id='lastname' /><br />
+				How many cats do you own?: <input type='text' id='numcats' /><br />
+				<div class="subdiv">
+				Favourite cat breeds (at least one):<br />
+					<input type="checkbox" name="catbreed" value="mainecoon" /> Maine Coon <br/ >
+					<input type="checkbox" name="catbreed" value="siamese" /> Siamese <br/ >
+					<input type="checkbox" name="catbreed"" value="persian" /> Persian <br/ >
+					<input type="checkbox" name="catbreed" value="ragdoll" /> Ragdoll <br/ >
+					<input type="checkbox" name="catbreed" value="scottishfold" /> Scottish Fold <br/ >
+				</div>
+
+				(Optional) Describe your love of cats: <br />
+				<textarea rows="3" cols="40" id="cattext"></textarea>
+				<br />
+				<input type="button" value="reset" onclick="resetForm()" />
+				<input type="submit" value="submit" onclick="validation()" />
+			
+			</form>	
+		</div>
+		<script type="text/javascript" src="./js/my_js.js"></script>
+	</body>
+</html>

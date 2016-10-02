@@ -1,3 +1,50 @@
 /*Assignment 2
 CS 1520 - Fall 2016
 Terry Tan */
+
+body {
+	color: #846267;
+}
+
+#maindiv {
+	background-color: #E0C1B3;
+	display: in-line block;
+	width: 500px;
+	text-align: center;
+	margin: auto;
+}
+.subdiv {
+	align: center;
+	text-align: left;
+	width: 250px;
+	margin: auto;
+	/*background-color: white;*/
+	padding: 10px;
+}
+textarea {
+	color: #AEB4A9;
+}
+input[type=text] {
+	color: #AEB4A9;
+	border-radius: 5px;
+	margin: 5px;
+	border: 1px solid #846267;
+}
+input[type=text]#numCats {
+	width: 50px;
+}
+input[type=submit], input[type=button] {
+	border-radius: 5px;
+	color: #846267;
+	background-color: white;
+	border: 1px solid #846267;
+	margin: 10px;
+}
+input[type=reset]  {
+	border-radius: 5px;
+	color: #846267;
+	background-color: white;
+	border: 1px solid #846267;
+	margin: 10px;
+	text-transform: lowercase;
+}
