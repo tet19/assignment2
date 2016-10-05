@@ -1,8 +1,5 @@
 <!doctype html>
 <html>
-<!-- Assignment 2
-CS 1520 - Fall 2016
-Terry Tan -->
   <head>
     <meta charset="utf-8">
     <link href="./css/main.css" rel="stylesheet">
@@ -11,27 +8,56 @@ Terry Tan -->
 
   <body>
     <div id="mainDiv">
-      <h1>Terry's Awesome Form</h1>
-
-      <form id="myForm">
-      Firstname: <input type='text' id='firstName' maxlength="25" /><br />
-      Lastname: <input type='text' id='lastName' maxlength="25"/><br />
-      How many cats do you own?: <input type='text' id='numCats' maxlength="5"/><br />
-      <div class="subdiv">
-        Favourite cat breeds (at least one):<br />
-        <input type="checkbox" name="catbreed" value="mainecoon" /> Maine Coon <br/ >
-        <input type="checkbox" name="catbreed" value="siamese" /> Siamese <br/ >
-        <input type="checkbox" name="catbreed" value="persian" /> Persian <br/ >
-        <input type="checkbox" name="catbreed" value="ragdoll" /> Ragdoll <br/ >
-        <input type="checkbox" name="catbreed" value="scottishfold" /> Scottish Fold <br/ >
+      <div id="notification">
       </div>
-      (Optional) Describe your love of cats: <br />
-      <textarea rows="3" cols="40" id="cattext"></textarea>
-      <br />
-      <input type="button" value="reset" onclick="resetForm()" />
-      <input type="submit" value="submit" onclick="validation()" />
+      <h1>Terry's Awesome Form</h1>
+      <form id="myForm">
+        <fieldset class="texts">
+          <div class="input-holder">
+            <label for="firstname">Firstname: </label>
+            <input type="text" id="firstname" maxlength="25" />
+          </div>
+          <div class="input-holder">
+            <label for="lastname">Lastname: </label>
+            <input type="text" id="lastname" maxlength="25"/>
+          </div>
+          <div class="input-holder">
+            <label for="numcats">How many cats do you own?: </label>
+            <input type="text" id="numcats" maxlength="5">
+          </div>
+        </fieldset>
+        <fieldset class="checkboxes">
+          <p>Favourite cat breeds (at least one):</p>
+          <div class="check-holder">
+            <input type="checkbox" name="catbreed" value="mainecoon" id="mainecoon"/>
+            <label for="mainecoon">Main Coon</label>
+          </div>
+          <div class="check-holder">
+            <input type="checkbox" name="catbreed" value="siamese" id="siamese"/>
+            <label for="siamese">Siamese</label>
+          </div>
+          <div class="check-holder">
+            <input type="checkbox" name="catbreed" value="persian" id="persian"/>
+            <label for="persian">Persian</label>
+          </div>
+          <div class="check-holder">
+            <input type="checkbox" name="catbreed" value="ragdoll" id="ragdoll"/>
+            <label for="ragdoll">Ragdoll</label>
+          </div>
+          <div class="check-holder">
+            <input type="checkbox" name="catbreed" value="scottishfold" id="scottishfold"/>
+            <label for="scottishfold">Scottish Fold</label>
+          </div>
+        </fieldset>
+        <fieldset class="largetext">
+          <p>(Optional) Describe your love of cats:</p>
+          <textarea rows="3" cols="40" id="cattext"></textarea>
+        </fieldset>
+        <input type="button" value="reset" onclick="resetForm()" />
+        <input type="button" name="submit" value="submit" onclick="validation()" />
       </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="./js/my_js.js"></script>
   </body>
 </html>

@@ -1,13 +1,9 @@
-/*Assignment 2
-CS 1520 - Fall 2016
-Terry Tan */
-
 function validation(event) {
 	var firstName, lastName, numCats;
 	//get stuff
-	firstName = document.getElementById("firstName").value;
-	lastName = document.getElementById("lastName").value;
-	numCats = document.getElementById("numCats").value;
+	firstName = document.getElementById("firstname").value;
+	lastName = document.getElementById("lastname").value;
+	numCats = document.getElementById("numcats").value;
 	catBreeds = document.getElementsByName("catbreed");
 	var errMessage = "";
 	var catcount = 0;
@@ -17,34 +13,25 @@ function validation(event) {
 		}
 	}
 	if ( !firstName ) {
-		errMessage += "Need an entry for first name!\n";
+		errMessage += "Need an entry for first name!<br />";
 	}
 	if ( !lastName ) {
-		errMessage += "Need an entry for last name!\n";
+		errMessage += "Need an entry for last name!<br />";
 	}
 	if (isNaN(numCats) || numCats < 0 || !numCats) {
-		errMessage += "Enter valid number for number of cats!\n";
+		errMessage += "Enter valid number for number of cats!<br />";
 	}
 	if (catcount == 0) {
-		errMessage += "Select at least one cat breed!\n";
+		errMessage += "Select at least one cat breed!<br />";
 	}
 	if (!numCats || isNaN(numCats) || !firstName || !lastName || catcount==0) {
-		alert("Invalid Input.\n" + errMessage);
+		document.getElementById('notification').innerHTML = "<u>Error</u>: " + errMessage;
 	}
 	else {
-	alert("Successful form submission. \nHello " + firstName + " " + lastName + "!");
-	//	var bod = document.getElementwithId("mainform");
-	//	bod.innerHTML = "Hello World!";
-	//document.getElementById("mainDiv").style.display = "none";			//Hide it
-	hideForm();
+		document.getElementById('notification').innerHTML = "";
+		document.getElementById("mainDiv").innerHTML = "Thank you for your submission! <br /> <img src=\"/img/happycat.jpeg\">";
 	}
 }
-
-function hideForm(){
-		document.getElementById("mainDiv").innerHTML = "<h1>Thank you for your submission!</h1>";   //Hide it
-}
-
-
 function resetForm (event){
 	document.getElementById("myForm").reset();
 }
