@@ -29,9 +29,12 @@ function validation(event) {
 	}
 	else {
 		document.getElementById('notification').innerHTML = "";
-		document.getElementById("mainDiv").innerHTML = "Thank you for your submission! <br /> <img src=\"/img/happycat.jpeg\">";
+		document.getElementById("mainDiv").innerHTML = "Thank you for your submission " + firstName +"!" ;
 	}
 }
 function resetForm (event){
 	document.getElementById("myForm").reset();
 }
+$("#myForm").submit( function(e) {
+    e.preventDefault();
+});
