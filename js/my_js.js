@@ -1,6 +1,5 @@
 function validation(event) {
 	var firstName, lastName, numCats;
-	//get stuff
 	firstName = document.getElementById("firstname").value;
 	lastName = document.getElementById("lastname").value;
 	numCats = document.getElementById("numcats").value;
